@@ -1,0 +1,75 @@
+---
+const { Overtitle, Title, Dates, Month, src, alt } = Astro.props;
+import { Image } from 'astro:assets';
+
+
+---
+<div>
+<article>
+    <div class="date">
+<h6>{Month}</h6>
+<h4>{Dates}</h4>
+    </div>
+
+<div class="title">
+<h5>{Overtitle}</h5>
+<h3>{Title}</h3>
+</div>
+
+<Image src={src} {alt} width={300} format='avif' />
+
+</article>
+
+<div class="line"></div>
+</div>
+<style>
+    h4 {
+        color: #FAE2E2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+    }
+
+    h5, h6 {
+        color: #9E4268;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+    }
+    h3 {
+        color: #FAE2E2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+    }
+
+article {
+    display: flex;
+    margin-left: 4.4rem;
+    margin-right: 7rem;
+}
+
+.date {
+    padding: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 20px;
+}
+
+.title {
+    padding: 10px;
+        margin-top: 20px;
+
+}
+
+.line{
+    width: 85%;
+    height: 2px;
+    background-color: #FAE2E2;  
+    place-self: center;
+}
+
+img{
+    padding-bottom: 20px;
+padding-top: 20px;
+margin-left: auto;
+}
+
+</style>
